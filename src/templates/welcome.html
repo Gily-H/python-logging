@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}">
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<button id="register-now-button">Register Now</button>
+{% endblock %}

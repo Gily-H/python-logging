@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block head %} {% endblock %}
+
+{% block content %} 
+{{ super() }}
+<form>
+    <label htmlfor="email-input">Email</label>
+    <input id="email-input"/>
+    <label htmlfor="firstname-input">First Name</label>
+    <input id="firstname-input"/>
+    <label htmlfor="lastname-input">Last Name</label>
+    <input id="last-input"/>
+    <button type="submit">Register</button>
+</form>
+{% endblock %}

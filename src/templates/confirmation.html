@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='confirmation.css') }}">
+{% endblock %}
+
+{% block content %}
+<h3>Registration for {{ name }} was {{ confirmed }}</h3>
+<button id="return-home-button">Return Home</button>
+{% endblock %}

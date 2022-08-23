@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- The base jinja template for all static html files -->
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
+    {% block head %}
+    {% endblock %}
+    <title>Regilog</title>
+</head>
+
+<body>
+    <div id="main">
+
+        <h2 id="welcome">Welcome to Regilog!</h2>
+
+        <div id="content">
+            {% block content %}
+            <h3 id="registration-header"><strong>Registration</strong></h3>
+            {% endblock %}
+        </div>
+
+        <footer id="footer">
+            This is a sample registration application
+        </footer>
+    </div>
+
+</body>
+
+</html>
