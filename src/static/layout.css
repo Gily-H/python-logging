@@ -45,3 +45,17 @@ html, body {
 #footer {
     padding-top:1.5em;
 }
+
+
+/* Button style */
+
+#regi--button {
+    width: 380px;
+    height: 90px;
+    border-radius: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: #47B2CA;
+}
