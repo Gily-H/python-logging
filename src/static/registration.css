@@ -1,0 +1,21 @@
+#register-form {
+    display:flex;
+    flex-direction: column;
+}
+
+input {
+    width: 380px;
+    border-radius: 5px;
+    border-color: rgb(235, 235, 235);
+    font-size: large;
+    padding: 0.5rem 0rem 0.5rem 0.5rem; 
+}
+
+label {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#lastname-input {
+    margin-bottom: 2rem;
+}

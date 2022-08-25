@@ -1,16 +1,19 @@
 {% extends "layout.html" %}
 
-{% block head %} {% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='registration.css') }}">
+{% endblock %}
 
 {% block content %} 
 {{ super() }}
-<form>
+<form id="register-form">
     <label htmlfor="email-input">Email</label>
-    <input id="email-input"/>
+    <input id="email-input" placeholder="Email"/>
     <label htmlfor="firstname-input">First Name</label>
-    <input id="firstname-input"/>
+    <input id="firstname-input" placeholder="First Name"/>
     <label htmlfor="lastname-input">Last Name</label>
-    <input id="last-input"/>
-    <button type="submit">Register</button>
+    <input id="lastname-input" placeholder="Last Name"/>
+    <button id="regi--button" type="submit">Register</button>
 </form>
 {% endblock %}
