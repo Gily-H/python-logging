@@ -6,6 +6,15 @@
 {% endblock %}
 
 {% block content %}
-<h3>Registration for {{ name }} was {{ confirmed }}</h3>
-<button id="return-home-button">Return Home</button>
+<div id="register-result">
+    {% if confirmed is true %}
+        <p>Registration for</p>
+        <p id="name"><strong>{{ name }}</strong></p>    
+        <p id="success"> was <strong>Successful</strong></p>
+    {% else %}
+        <p id="failure">Failed to register user</p>
+        <p id="name"><strong>{{ name }}</strong></p>
+    {% endif %}
+</div>
+<button id="regi--button">Return Home</button>
 {% endblock %}
