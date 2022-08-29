@@ -95,7 +95,7 @@ This project will mainly adhere to the style guide referenced in [PEP 8](https:/
   ### Documentation
   Application code will be documented through the use of docstrings. More on docstrings can be read in [PEP 257](https://peps.python.org/pep-0257/)
 
-  Docstrings should be denoted using triple double-quotes.
+  Docstrings should be denoted using `triple double-quotes`. Same-line docstrings should be used if the method or class does not have any parameters and can fit in the 72 character docstring line limit.
   ```python
   def some_method():
       """ Docstring for some_method """
