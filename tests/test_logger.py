@@ -1,5 +1,5 @@
-from ctypes import Structure
-from src.logger_config import StructuredMessage
+import logging
+from src.logger_config import StructuredMessage, configure_loggers
 
 # Tests for StructuredMessage class
 
@@ -20,3 +20,19 @@ def test_outputs_message_if_no_kwargs_given():
     expected_output = "This is a test with no kwargs"
     record_to_test = StructuredMessage(message)
     assert expected_output == str(record_to_test)
+
+
+# Tests for Logging Config
+
+def test_exists_logger_regilog_with_level_debug():
+    """ Test if logger named regilog exists with debug level """
+    configure_loggers()
+    logger = logging.getLogger("regilog")
+    assert logger.isEnabledFor(10)
+    assert logger.hasHandlers()
+
+def test_exists_root_logger_with_level_warning():
+    configure_loggers()
+    logger = logging.getLogger("root")
+    assert logger.isEnabledFor(30)
+    assert logger.hasHandlers()
